@@ -1,27 +1,33 @@
-# Tp02LudwigTheo
+# tp02_ludwig_theo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+## À propos
 
-## Development server
+Code réalisé par [Théo LUDWIG](https://theoludwig.fr) dans le cadre de la formation [Ingénieur en Informatique et Systèmes d'Information (SI), CNAM](https://www.itii-alsace.fr/formations/informatique-et-systemes-dinformation-le-cnam/), pour le module Web.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[SUJET](./SUJET.md)
 
-## Code scaffolding
+## Prérequis
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Node.js](https://nodejs.org/) >= 20.0.0
+- [npm](https://www.npmjs.com/) >= 10.0.0
 
-## Build
+## Utilisation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+# Installer les dépendances
+npm clean-install
 
-## Running unit tests
+# Lancer le serveur de développement
+npm run start
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Lint
+npm run lint
+npm run lint:prettier
+npm run lint:typescript
 
-## Running end-to-end tests
+# Build
+npm run build
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Tests
+npm run test
+```
