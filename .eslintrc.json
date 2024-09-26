@@ -1,5 +1,19 @@
 {
-  "extends": ["conventions"],
+  "extends": ["conventions", "plugin:tailwindcss/recommended"],
+  "plugins": ["import-x"],
+  "rules": {
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "import-x/no-absolute-path": "error",
+    "import-x/no-webpack-loader-syntax": "error",
+    "import-x/no-self-import": "error",
+    "import-x/no-useless-path-segments": "error",
+    "import-x/export": "error",
+    "import-x/no-duplicates": "error",
+    "import-x/no-named-default": "error",
+    "import-x/no-empty-named-blocks": "error",
+    "import-x/no-anonymous-default-export": "error"
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],

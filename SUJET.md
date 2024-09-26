@@ -12,16 +12,16 @@ Cette page doit inclure les composants suivants :
 - Un composant footer
 - Un composant compte formulaire saisie informations client:
   - Nom
-  - prénom
-  - adresse
-  - cp
-  - ville
-  - tel
-  - email
-  - civilité
-  - password
-  - login
-  - pays
+  - Prénom
+  - Adresse
+  - Code Postal
+  - Ville
+  - Tel
+  - Email
+  - Civilité
+  - Password
+  - Login
+  - Pays
 - Un composant récapitulatif des données saisies réaffichées après validation.
 
 ## 3. Procédure de Livraison
