@@ -12,7 +12,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint:prettier": "prettier . --check"
+    "lint": "ng lint",
+    "lint:prettier": "prettier . --check",
+    "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
     "@angular/animations": "18.2.6",
@@ -32,6 +34,13 @@
     "@angular/cli": "18.2.6",
     "@angular/compiler-cli": "18.2.6",
     "@types/jasmine": "5.1.4",
+    "@typescript-eslint/eslint-plugin": "8.7.0",
+    "@typescript-eslint/parser": "8.7.0",
+    "angular-eslint": "18.3.1",
+    "eslint": "8.57.1",
+    "eslint-config-conventions": "15.0.0",
+    "eslint-plugin-promise": "7.1.0",
+    "eslint-plugin-unicorn": "55.0.0",
     "prettier": "3.3.3",
     "jasmine-core": "5.3.0",
     "karma": "6.4.4",
