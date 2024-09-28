@@ -1,4 +1,5 @@
 import { Component } from "@angular/core"
+import { VERSION } from "../../utils/constants"
 
 @Component({
   selector: "app-footer",
@@ -8,5 +9,5 @@ import { Component } from "@angular/core"
   styleUrl: "./footer.component.css",
 })
 export class FooterComponent {
-  version = "1.0.0-develop.1"
+  version = VERSION
 }
