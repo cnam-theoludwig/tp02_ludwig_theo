@@ -30,7 +30,7 @@ const buttonVariants = cva({
   },
 })
 
-export type ButtonVariants = VariantProps<typeof buttonVariants>
+type ButtonVariants = VariantProps<typeof buttonVariants>
 
 @Directive({
   selector: "[appButton]",
