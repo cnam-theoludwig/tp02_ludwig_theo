@@ -59,6 +59,36 @@
     @apply font-semibold italic;
     cursor: help;
   }
+
+  h1 {
+    @apply text-3xl font-semibold;
+  }
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+  h3 {
+    @apply text-xl font-semibold;
+  }
+  h4,
+  h5,
+  h6 {
+    @apply text-lg font-semibold;
+  }
+  p {
+    @apply break-words text-base;
+  }
+
+  a {
+    @apply text-primary inline-flex items-center gap-1 font-semibold hover:underline focus:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 0.25;
+  }
 }
 
 body {
