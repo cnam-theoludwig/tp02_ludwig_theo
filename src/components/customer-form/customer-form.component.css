@@ -1,0 +1,11 @@
+.input-container {
+  @apply my-6 mx-0;
+}
+
+.input-container-row {
+  @apply flex justify-between gap-8;
+}
+
+.input-container-row > div {
+  @apply w-full;
+}

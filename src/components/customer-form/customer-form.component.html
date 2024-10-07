@@ -1,66 +1,42 @@
 <section class="my-6">
   <h2>Création de compte client</h2>
 
-  <form id="customerForm">
+  <form>
     <div class="input-container input-container-row">
       <div>
-        <label for="firstname">Prénom</label>
-        <input
-          type="text"
-          class="form-control"
-          id="firstname"
-          name="firstname"
-          required
-        />
+        <label appLabel for="firstname">Prénom</label>
+        <input type="text" id="firstname" name="firstname" required appInput />
       </div>
 
       <div>
-        <label for="lastname">Nom</label>
-        <input
-          type="text"
-          class="form-control"
-          id="lastname"
-          name="lastname"
-          required
-        />
+        <label appLabel for="lastname">Nom</label>
+        <input type="text" id="lastname" name="lastname" required appInput />
       </div>
     </div>
 
     <div class="input-container">
-      <label for="address">Adresse</label>
-      <input
-        type="text"
-        class="form-control"
-        id="address"
-        name="address"
-        required
-      />
+      <label appLabel for="address">Adresse</label>
+      <input type="text" id="address" name="address" required appInput />
     </div>
 
     <div class="input-container">
-      <label for="zipCode">Code Postal</label>
-      <input
-        type="text"
-        class="form-control"
-        id="zipCode"
-        name="zipCode"
-        required
-      />
+      <label appLabel for="zipCode">Code Postal</label>
+      <input type="text" id="zipCode" name="zipCode" required appInput />
     </div>
 
     <div class="input-container">
-      <label for="city">Ville</label>
-      <input type="text" class="form-control" id="city" name="city" required />
+      <label appLabel for="city">Ville</label>
+      <input type="text" id="city" name="city" required appInput />
     </div>
 
     <div class="input-container">
-      <label for="phone">Téléphone</label>
-      <input type="tel" class="form-control" id="phone" name="phone" required />
+      <label appLabel for="phone">Téléphone</label>
+      <input type="tel" id="phone" name="phone" required appInput />
     </div>
 
     <div class="input-container">
-      <label for="gender">Civilité</label>
-      <select class="form-control" id="gender" name="gender">
+      <label appLabel for="gender">Civilité</label>
+      <select appSelect id="gender" name="gender">
         <option value="man">Monsieur</option>
         <option value="woman">Madame</option>
       </select>
@@ -68,48 +44,38 @@
 
     <div class="input-container input-container-row">
       <div>
-        <label for="login">Login</label>
-        <input
-          type="text"
-          class="form-control"
-          id="login"
-          name="login"
-          required
-        />
+        <label appLabel for="login">Login</label>
+        <input type="text" id="login" name="login" required appInput />
       </div>
 
       <div>
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email"
-          required
-        />
+        <label appLabel for="email">Email</label>
+        <input type="email" id="email" name="email" required appInput />
       </div>
     </div>
 
     <div class="input-container input-container-row">
       <div>
-        <label for="password">Mot de passe</label>
+        <label appLabel for="password">Mot de passe</label>
         <input
           type="password"
-          class="form-control"
           id="password"
           name="password"
           required
+          appInput
         />
       </div>
 
       <div>
-        <label for="passwordConfirmation">Confirmer le mot de passe</label>
+        <label appLabel for="passwordConfirmation"
+          >Confirmer le mot de passe</label
+        >
         <input
           type="password"
-          class="form-control"
           id="passwordConfirmation"
           name="passwordConfirmation"
           required
+          appInput
         />
       </div>
     </div>

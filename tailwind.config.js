@@ -1,3 +1,4 @@
+import tailwindcssForms from "@tailwindcss/forms"
 import { fontFamily } from "tailwindcss/defaultTheme"
 
 /** @type {import('tailwindcss').Config} */
@@ -18,7 +19,7 @@ const config = {
       sans: ["'Montserrat'", ...fontFamily.sans],
     },
   },
-  plugins: [],
+  plugins: [tailwindcssForms],
 }
 
 export default config
