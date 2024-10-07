@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing"
 
+import { CUSTOMER_MOCK } from "../../models/customer"
 import { CustomerItemComponent } from "./customer-item.component"
 
 describe("CustomerItemComponent", () => {
@@ -13,6 +14,7 @@ describe("CustomerItemComponent", () => {
 
     fixture = TestBed.createComponent(CustomerItemComponent)
     component = fixture.componentInstance
+    component.customer = CUSTOMER_MOCK
     fixture.detectChanges()
   })
 

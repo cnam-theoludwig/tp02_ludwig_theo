@@ -13,3 +13,16 @@ export interface Customer {
   password: string
   passwordConfirmation: string
 }
+
+export const CUSTOMER_MOCK: Customer = {
+  firstName: "John",
+  lastName: "Doe",
+  address: "5 Rue d'Angular",
+  zipCode: "12345",
+  city: "Strasbourg",
+  phone: "0712345678",
+  gender: "man",
+  email: "john@doe.com",
+  password: "password",
+  passwordConfirmation: "password",
+}
