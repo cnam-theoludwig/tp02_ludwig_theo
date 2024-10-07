@@ -3,11 +3,13 @@
 <main
   class="min-h-[calc(100vh-155px)] md:mx-auto md:max-w-4xl lg:max-w-7xl px-6"
 >
-  <app-customer-form></app-customer-form>
-
-  <hr />
-
-  <app-customer-list></app-customer-list>
+  <app-customer-form (customerCreated)="addCustomer($event)">
+  </app-customer-form>
+  <app-customer-list
+    [customers]="customers"
+    (customerDeleted)="deleteCustomer($event)"
+  >
+  </app-customer-list>
 </main>
 
 <app-footer />

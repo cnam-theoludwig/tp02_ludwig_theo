@@ -1,3 +1,18 @@
-<section class="my-6">
-  <h2>Compte clients</h2>
-</section>
+@if (customers.length > 0) {
+  <hr />
+
+  <section class="my-6">
+    <h2>Compte clients</h2>
+
+    <ul class="my-6 space-y-4 w-full list-none">
+      @for (customer of customers; track $index) {
+        <li>
+          <app-customer-item
+            [customer]="customer"
+            (customerDeleted)="customerDeleted.emit(customer)"
+          ></app-customer-item>
+        </li>
+      }
+    </ul>
+  </section>
+}

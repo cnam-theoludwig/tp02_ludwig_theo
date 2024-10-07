@@ -3,9 +3,13 @@
 }
 
 .input-container-row {
-  @apply flex justify-between gap-8;
+  @apply flex justify-between gap-8 flex-col sm:flex-row;
 }
 
 .input-container-row > div {
   @apply w-full;
+}
+
+.error-message {
+  @apply text-error mx-1 mt-2 text-sm font-medium;
 }

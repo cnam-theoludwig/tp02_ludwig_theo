@@ -21,6 +21,10 @@
       "plugins": ["@typescript-eslint"],
       "parserOptions": {
         "projectService": true
+      },
+      "rules": {
+        "@typescript-eslint/unbound-method": "off",
+        "@typescript-eslint/consistent-type-imports": "off"
       }
     },
     {

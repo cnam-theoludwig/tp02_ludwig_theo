@@ -1,85 +1,247 @@
 <section class="my-6">
   <h2>Création de compte client</h2>
 
-  <form>
+  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
     <div class="input-container input-container-row">
       <div>
-        <label appLabel for="firstname">Prénom</label>
-        <input type="text" id="firstname" name="firstname" required appInput />
+        <label appLabel for="firstName">Prénom</label>
+        <input
+          appInput
+          type="text"
+          formControlName="firstName"
+          id="firstName"
+          name="firstName"
+          required
+          [state]="
+            customerForm.controls.firstName.valid ||
+            !customerForm.controls.firstName.dirty
+              ? 'idle'
+              : 'error'
+          "
+        />
+        @if (
+          !customerForm.controls.firstName.valid &&
+          customerForm.controls.firstName.dirty
+        ) {
+          <p class="error-message">Le prénom est obligatoire.</p>
+        }
       </div>
 
       <div>
-        <label appLabel for="lastname">Nom</label>
-        <input type="text" id="lastname" name="lastname" required appInput />
+        <label appLabel for="lastName">Nom</label>
+        <input
+          appInput
+          type="text"
+          formControlName="lastName"
+          id="lastName"
+          name="lastName"
+          required
+          [state]="
+            customerForm.controls.lastName.valid ||
+            !customerForm.controls.lastName.dirty
+              ? 'idle'
+              : 'error'
+          "
+        />
+        @if (
+          !customerForm.controls.lastName.valid &&
+          customerForm.controls.lastName.dirty
+        ) {
+          <p class="error-message">Le nom est obligatoire.</p>
+        }
       </div>
     </div>
 
     <div class="input-container">
       <label appLabel for="address">Adresse</label>
-      <input type="text" id="address" name="address" required appInput />
+      <input
+        appInput
+        type="text"
+        formControlName="address"
+        id="address"
+        name="address"
+        required
+        [state]="
+          customerForm.controls.address.valid ||
+          !customerForm.controls.address.dirty
+            ? 'idle'
+            : 'error'
+        "
+      />
+      @if (
+        !customerForm.controls.address.valid &&
+        customerForm.controls.address.dirty
+      ) {
+        <p class="error-message">L'adresse est obligatoire.</p>
+      }
     </div>
 
     <div class="input-container">
       <label appLabel for="zipCode">Code Postal</label>
-      <input type="text" id="zipCode" name="zipCode" required appInput />
+      <input
+        appInput
+        type="text"
+        formControlName="zipCode"
+        id="zipCode"
+        name="zipCode"
+        required
+        [state]="
+          customerForm.controls.zipCode.valid ||
+          !customerForm.controls.zipCode.dirty
+            ? 'idle'
+            : 'error'
+        "
+      />
+      @if (
+        !customerForm.controls.zipCode.valid &&
+        customerForm.controls.zipCode.dirty
+      ) {
+        <p class="error-message">Le code postal est obligatoire.</p>
+      }
     </div>
 
     <div class="input-container">
       <label appLabel for="city">Ville</label>
-      <input type="text" id="city" name="city" required appInput />
+      <input
+        appInput
+        type="text"
+        formControlName="city"
+        id="city"
+        name="city"
+        required
+        [state]="
+          customerForm.controls.city.valid || !customerForm.controls.city.dirty
+            ? 'idle'
+            : 'error'
+        "
+      />
+      @if (
+        !customerForm.controls.city.valid && customerForm.controls.city.dirty
+      ) {
+        <p class="error-message">La ville est obligatoire.</p>
+      }
     </div>
 
     <div class="input-container">
       <label appLabel for="phone">Téléphone</label>
-      <input type="tel" id="phone" name="phone" required appInput />
+      <input
+        appInput
+        type="tel"
+        formControlName="phone"
+        id="phone"
+        name="phone"
+        required
+        [state]="
+          customerForm.controls.phone.valid ||
+          !customerForm.controls.phone.dirty
+            ? 'idle'
+            : 'error'
+        "
+      />
+      @if (
+        !customerForm.controls.phone.valid && customerForm.controls.phone.dirty
+      ) {
+        <p class="error-message">
+          Veuillez saisir un numéro de téléphone valide.
+        </p>
+      }
     </div>
 
     <div class="input-container">
       <label appLabel for="gender">Civilité</label>
-      <select appSelect id="gender" name="gender">
+      <select appSelect formControlName="gender" id="gender" name="gender">
         <option value="man">Monsieur</option>
         <option value="woman">Madame</option>
       </select>
     </div>
 
-    <div class="input-container input-container-row">
-      <div>
-        <label appLabel for="login">Login</label>
-        <input type="text" id="login" name="login" required appInput />
-      </div>
-
-      <div>
-        <label appLabel for="email">Email</label>
-        <input type="email" id="email" name="email" required appInput />
-      </div>
+    <div class="input-container">
+      <label appLabel for="email">Email</label>
+      <input
+        appInput
+        formControlName="email"
+        type="email"
+        id="email"
+        name="email"
+        required
+        [state]="
+          customerForm.controls.email.valid ||
+          !customerForm.controls.email.dirty
+            ? 'idle'
+            : 'error'
+        "
+      />
+      @if (
+        !customerForm.controls.email.valid && customerForm.controls.email.dirty
+      ) {
+        <p class="error-message">Veuillez saisir une adresse email valide.</p>
+      }
     </div>
 
     <div class="input-container input-container-row">
       <div>
         <label appLabel for="password">Mot de passe</label>
         <input
+          appInput
+          formControlName="password"
           type="password"
           id="password"
           name="password"
           required
-          appInput
+          [state]="
+            customerForm.controls.password.valid ||
+            !customerForm.controls.password.dirty
+              ? 'idle'
+              : 'error'
+          "
         />
+        @if (
+          !customerForm.controls.password.valid &&
+          customerForm.controls.password.dirty
+        ) {
+          <p class="error-message">Le mot de passe est obligatoire.</p>
+        }
       </div>
 
       <div>
-        <label appLabel for="passwordConfirmation"
-          >Confirmer le mot de passe</label
-        >
+        <label appLabel for="passwordConfirmation">
+          Confirmer le mot de passe
+        </label>
         <input
+          appInput
+          formControlName="passwordConfirmation"
           type="password"
           id="passwordConfirmation"
           name="passwordConfirmation"
           required
-          appInput
+          [state]="
+            customerForm.controls.passwordConfirmation.valid ||
+            !customerForm.controls.passwordConfirmation.dirty
+              ? 'idle'
+              : 'error'
+          "
         />
+        @if (
+          !customerForm.controls.passwordConfirmation.valid &&
+          customerForm.controls.passwordConfirmation.dirty
+        ) {
+          <p class="error-message">
+            La confirmation du mot de passe est obligatoire.
+          </p>
+        }
       </div>
     </div>
 
-    <button type="submit" appButton>Créer un compte</button>
+    <button appButton type="submit" [disabled]="!customerForm.valid">
+      Créer un compte
+    </button>
+
+    @if (
+      !isValidPasswordConfirm &&
+      customerForm.controls.password.dirty &&
+      customerForm.controls.passwordConfirmation.dirty
+    ) {
+      <p class="error-message">Les mots de passe ne correspondent pas.</p>
+    }
   </form>
 </section>

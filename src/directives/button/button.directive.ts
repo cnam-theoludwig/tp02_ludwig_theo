@@ -19,7 +19,7 @@ const buttonVariants = cva({
         "border-error text-error hover:bg-error border-2 bg-transparent hover:text-white",
     },
     size: {
-      small: "h-9 rounded-md px-3",
+      small: "h-8 font-medium text-sm rounded-md px-3",
       medium: "h-10 px-4 py-2",
       large: "h-11 rounded-md px-8",
     },
