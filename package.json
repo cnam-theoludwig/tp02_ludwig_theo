@@ -1,7 +1,11 @@
 {
   "name": "tp02-ludwig-theo",
-  "version": "1.0.0-develop.1",
+  "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnam-theoludwig/tp02_ludwig_theo.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=20.0.0",

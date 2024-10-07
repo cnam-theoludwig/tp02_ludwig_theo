@@ -1,5 +1,5 @@
 import { Component } from "@angular/core"
-import { VERSION } from "../../utils/constants"
+import { GIT_REPO_LINK, VERSION } from "../../utils/constants"
 
 @Component({
   selector: "app-footer",
@@ -10,4 +10,5 @@ import { VERSION } from "../../utils/constants"
 })
 export class FooterComponent {
   version = VERSION
+  gitRepoLink = GIT_REPO_LINK
 }
